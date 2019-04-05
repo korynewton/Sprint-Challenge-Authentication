@@ -12,3 +12,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.form {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: column nowrap;
+  width: 40%;
+  margin: 20px auto;
+}
+
+.form input, button {
+  height: 30px;
+}
+
+.form button {
+  background-color: lightgreen;
+  border:none;
+}
+
+.form button:hover {
+  cursor:pointer
+}
+
+
+.App header, :visited {
+   font-size: 30px;
+   color:black;
+}
+
+
+

@@ -9,7 +9,7 @@ export default class Register extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} >
+        <form className="form" onSubmit={this.handleSubmit} >
             <input type="text" placeholder='username' name='username' id='username' value={this.state.username} onChange={this.handleChange}/>
             <input type="password" placeholder='password' name='password' id='password' value={this.state.password} onChange={this.handleChange}/>
             <button>Register</button>
@@ -30,7 +30,7 @@ export default class Register extends Component {
       .then(res => {
           axios.post('http://localhost:3300/api/login', this.state).then(res => {
             localStorage.setItem('token', res.data.token)
-            this.props.history.push('/users') 
+            this.props.history.push('/jokes') 
           }).catch(err => {
             console.error('error on login')
           })

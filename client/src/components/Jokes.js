@@ -16,6 +16,8 @@ export default class Users extends Component {
     )
   }
 
+  
+
 
   componentDidMount() {
     const token = localStorage.getItem('token')
@@ -24,11 +26,11 @@ export default class Users extends Component {
         Authorization: token
       }
     }
+
     axios.get('http://localhost:3300/api/jokes', reqRequirements).then(res => {
       this.setState({ jokes: res.data})
     }).catch(err => {
       console.error(err)
     })
-    
-  }
+  }  
 }
